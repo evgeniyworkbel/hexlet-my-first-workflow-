@@ -1,7 +1,10 @@
 name: greeting
+
 on: push
+
 jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
-      -run: make say-hello
+      - uses: actions/checkout@v2
+      - run: make say-hello
